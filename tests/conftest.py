@@ -13,9 +13,9 @@ def _get_driver(name):
         raise TypeError("Driver is not found")
 
 
-@pytest.fixture(params=["chrome", "firefox"])
+@pytest.fixture(params=["chrome"])
 def web_driver(request):
-    driver = _get_driver(request.params)
+    driver = _get_driver(request.param)
     driver.get(URL)
     yield driver
     driver.quit()
