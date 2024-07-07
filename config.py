@@ -9,6 +9,7 @@ class URL(str, Enum):
     RESET_PASSWORD = f'{DOMEN}reset-password'
     REGISTER = f'{DOMEN}register'
     PERSONAL_AREA = f'{DOMEN}account/profile'
+    FEED = f'{DOMEN}feed'
 
 
 LOGIN_USER = "ooooccccppp@fff.ru"

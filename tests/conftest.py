@@ -6,6 +6,7 @@ from page_objects.register_page import RegisterPage
 from page_objects.login_page import LoginPage
 from selenium import webdriver
 from helpers import get_faker_user
+from config import DOMEN
 
 
 def _get_driver(name):
@@ -20,6 +21,7 @@ def _get_driver(name):
 @pytest.fixture(params=["chrome", "firefox"])
 def web_driver(request):
     driver = _get_driver(request.param)
+    driver.get(DOMEN)
     yield driver
     driver.quit()
 
