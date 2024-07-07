@@ -1,5 +1,3 @@
-import time
-
 import pytest
 
 from page_objects.register_page import RegisterPage
